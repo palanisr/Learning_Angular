@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Tutorial Applciation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatiable" content="ie=edge">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="appController.js" charset="UTF-8"></script>
+    <script src="appDirective.js" charset="UTF-8"></script>
+    <script src="appValues.js" charset="UTF-8"></script>
+    <script src="appProvider.js" charset="UTF-8"></script>
+    <script src="appFactory.js" charset="UTF-8"></script>
+    <script src="appService.js" charset="UTF-8"></script>
+    <script src="app.js" charset="UTF-8"></script>
+
+</head>
+<body>
+<h2>Angular test Application</h2>
+<div ng-controller="MainController">
+    {{test}}
+    <br>
+    {{msg}}
+    <br>
+    {{msg2}}
+</div>
+
+<div ng-controller="SecondController">
+    {{msg}}
+    <br>
+    {{msg2}}
+</div>
+
+<hello-world></hello-world>
+
+<div ng-controller="TrdController">
+    <user-fullname user="user1"></user-fullname>
+    <br>
+    <user-fullname user="user2"></user-fullname>
+    <br>
+    <user-fullname user="user3"></user-fullname>
+    <br>
+    <user-fullname user="user4"></user-fullname>
+    <br>
+    <test user="user1"></test>
+</div>
+
+
+<!--angular with this instead of scope-->
+<div ng-controller="FrthController as Test">
+    {{Test.name1}}
+    <br>
+    {{Test.email1}}
+</div>
+<div ng-controller="FifthController"></div>
+
+<div ng-controller="SixthController"></div>
+
+</body>
+</html>
